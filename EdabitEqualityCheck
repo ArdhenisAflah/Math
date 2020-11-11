@@ -1,0 +1,11 @@
+using System.Reflection;
+using System;
+//level:Medium
+public class Program
+{
+	public static bool CheckEquality(object a, object b)
+	{
+		return a.Equals(b);
+		
+	}
+}
