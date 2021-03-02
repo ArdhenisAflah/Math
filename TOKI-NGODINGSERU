@@ -1,0 +1,49 @@
+using System;
+using System.Linq;
+
+
+
+
+
+static void Main(string[] args)
+        {
+            //sample input.
+            //1.10 10 1 3 3 3
+            string input = Console.ReadLine();
+            string[] sr;
+            sr = input.Split(' ');
+            int[] proc = new int[sr.Length];
+            //
+
+            for(int x = 0; x < sr.Length; x++)
+            {
+                proc[x] = int.Parse(sr[x]);
+            }
+
+            //
+
+            if(proc[2] != proc[4] || proc[3] != proc[5])
+            {
+                if (proc[2] < 1 || proc[2] > proc[0] || proc[5] < 1 || proc[5] > proc[1])
+                {
+                    Console.WriteLine("Out of Board");
+                }
+                else
+                {
+                    if(proc[2] > proc[4])
+                    {
+                        Console.WriteLine("TIDAK");
+                    }
+                    else
+                    {
+                        Console.WriteLine("YA");
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("TIDAK");
+            }
+
+
+        }
