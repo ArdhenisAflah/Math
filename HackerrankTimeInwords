@@ -1,0 +1,55 @@
+using System;
+using System.Text;
+using System.Collections;
+using System.Linq;
+using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics;
+using System.Diagnostics.Tracing;
+using System.Data;
+using System.Collections.Generic;
+namespace Codewars
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int jam = int.Parse(Console.ReadLine());
+            int menit = int.Parse(Console.ReadLine());
+            string[] number = { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty","twenty one","twenty two","twenty three","twenty four","twenty five","twenty six","twenty seven","twenty eight","twenty nine"};
+            string[] selisih = { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "quarter", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "twenty one", "twenty two", "twenty three", "twenty four", "twenty five", "twenty six", "twenty seven", "twenty eight", "twenty nine" };
+            if (menit == 0 || menit == 00)
+            {
+                Console.WriteLine(number[jam-1] + " o'clock");
+            }else if(menit == 01)
+            {
+                Console.WriteLine(number[menit - 1] + " minute" + " past " + number[jam - 1]);
+                
+            }
+            else if (menit > 01 && menit < 30)
+            {
+                var d = selisih[menit - 1];
+                if (d == "quarter")
+                {
+                    Console.WriteLine(selisih[menit - 1]  + " past " + number[jam - 1]);
+                }
+                else
+                {
+                    Console.WriteLine(selisih[menit - 1] +" minutes " +"past " + number[jam - 1]);
+                }
+            }
+            else if(menit == 30)
+            {
+                Console.WriteLine("half" + " past " + number[jam - 1]);
+            }else if(menit > 30)
+            {
+                var salisih = 60 - menit;
+                if (selisih[salisih - 1] == "quarter")
+                {
+                    Console.WriteLine(selisih[salisih - 1] + " to " + (number[(int)jam]));
+                }
+                else
+                {
+                    Console.WriteLine(selisih[salisih - 1] + " minutes " + "to " + (number[(int)jam]));
+                }
+            }
