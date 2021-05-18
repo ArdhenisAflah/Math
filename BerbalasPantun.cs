@@ -10,7 +10,8 @@ using System.Text;
              * Tingkatan: Penyisihan-(mudah)
              * bahasa:c#
              * Event:Gemastik 2017
-             * 0(n) -> big o notation just my guess ehehee 
+             * 0(n) -> big o notation just my guess ehehee
+             * kumpulan problem gemastik: https://tlx.toki.id/problems/gemastik-2017-pemrograman-penyisihan/A
 
 
              */
