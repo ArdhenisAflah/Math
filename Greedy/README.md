@@ -1,3 +1,6 @@
+**Perlu Di ingat Ini adalah Soal Pemrograman Algoritma Greedy
+Jadi Di mohon Untuk Mempelajari Greedy Algorithm Sebelumnya.**
+
 Contoh Soal 6.1: Activity Selection
 Anda diberikan N buah aktivitas. Aktivitas ke-i dinyatakan dalam hai
 .start,ai
