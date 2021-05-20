@@ -19,15 +19,15 @@ Solusi: Anda dapat hadir di 3 aktivitas berbeda yang tidak saling tumpang tindih
 
 Pseudo Code/Algoritma:
 
-'function SOLVEACTIVITYSELECTION(a,N)
- SortByEndTime(a,N) //Urutkan a secara menaik berdasarkan a[i].end
- selectedCount ← 0
- startTime ← 0
- for i ← 1, N do
- if (a[i].start ≥ startTime) then
- selectedCount ← selectedCount +1
- startTime ← a[i].end
- end if
- end for
- return selectedCount
- end function'
+> function SOLVEACTIVITYSELECTION(a,N)
+> SortByEndTime(a,N) //Urutkan a secara menaik berdasarkan a[i].end
+> selectedCount ← 0
+> startTime ← 0
+> for i ← 1, N do
+> if (a[i].start ≥ startTime) then
+> selectedCount ← selectedCount +1
+> startTime ← a[i].end
+> end if
+> end for
+> return selectedCount
+> end function
