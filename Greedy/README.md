@@ -17,3 +17,17 @@ Aktivitas: [{1,3},{2,6},{5,7},{8,9}]
 Solusi: Anda dapat hadir di 3 aktivitas berbeda yang tidak saling tumpang tindih, yaitu [{1,3},
 {5,7}, dan {8,9}]
 
+Pseudo Code/Algoritma:
+
+: function SOLVEACTIVITYSELECTION(a,N)
+2: SortByEndTime(a,N) . Urutkan a secara menaik berdasarkan a[i].end
+3: selectedCount ← 0
+4: startTime ← 0
+5: for i ← 1, N do
+6: if (a[i].start ≥ startTime) then
+7: selectedCount ← selectedCount +1
+8: startTime ← a[i].end
+9: end if
+10: end for
+11: return selectedCount
+12: end function
