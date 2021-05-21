@@ -34,3 +34,9 @@ Pseudo Code/Algoritma:
 > end for
 > return selectedCount
 > end function
+
+*Super_Duper Soal*:
+
+![Screenshot_20210521-120916](https://user-images.githubusercontent.com/70132549/119085993-f7960c80-ba2e-11eb-9b16-1bdacdcea3f8.png)
+
+
