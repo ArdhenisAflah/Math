@@ -1,65 +1,41 @@
-using System;
-using System.Linq;
-using System.Collections.Generic;
-using System.Text;
 
-namespace LeetCodeSolutionList
-{
-    class Program
-    {
-    static void Main(string[] args)
-        {
-            //Is Subsequence.
-            //leetcode problem 392 - Easy.
-            /* string t.Length ~500.000 and s is <= 100
-             * return True if all t char exist with order in string s
-             *using two pointer method 
-             */
 
-            string s = Console.ReadLine();
-            string t = Console.ReadLine();
+    
+public class Solution {
+    public bool IsSubsequence(string s, string t) {
+        //inisialisasi 2 pointer.
+            
+            //link problem : https://leetcode.com/problems/is-subsequence/
+         if(s == String.Empty){
+             return true;
+         }else if(t == String.Empty){
+             return false;
+         }
+            int left_pointer = 0; //short string
+            int right_pointer = 0; //long string
 
-            //inisialisasi 2 pointer.
-            int j = 0;
-            int i = 0;
-            int count = 0;
-            int left_pointer = s[j]; //short string
-            int right_pointer = t[i]; //long string
-
-            while(j < s.Length)
+            while(right_pointer < t.Length)
             {
                 
-                if(i >= t.Length-1)
+                
+               if(s[left_pointer] == t[right_pointer])
                 {
-                    right_pointer = t[0];
-                    left_pointer = s[j++];
+                   
+                    left_pointer++;
+                    if(left_pointer >= s.Length){
+                        return true;
+                    }
                 }
-               if(left_pointer == right_pointer)
-                {
-                    count++;
-                    left_pointer = s[j++];
-                    right_pointer = t[0];
-                }
-                else
-                {
-                    right_pointer = t[i++];
-                }
+                
+                    right_pointer++;
+                
                
             }
+            return false;
             
-            if(count == s.Length)
-            {
-                Console.WriteLine(true);
-               
-            }
-            else
-            {
-                Console.WriteLine(false);
-               
-            }
 
-            Console.ReadLine();
-        }
+            
+        
     
     
     }
